@@ -2,11 +2,12 @@ import random as r
 from helper import *
 from image import *
 def main():
-        # select random word from file
+        # starts the initial loop to begin the game
         while True:
             word = r.choice(open("word_list.txt").read().split())
             print(" Welcome to hangman, try and guess the word to save a stick man!\n")
             play(word)
+            # starts the second loop after the game ends to see if the player wants to play again
             while True:
                 play_again = input("Play again? [Y/N]: ").upper()
                 if play_again == "N":
